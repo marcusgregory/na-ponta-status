@@ -1,6 +1,87 @@
-<!doctype html><html lang="pt-br"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Na Ponta — Status</title></head>
-<body style="font-family:system-ui;background:#0f172a;color:#e2e8f0;display:grid;place-items:center;height:100vh;margin:0;text-align:center">
-<div><h1 style="margin:0">📦 Na Ponta</h1><p style="color:#94a3b8">Página de status — configurando… atualiza sozinha em breve.</p></div>
-</body></html>
+<meta http-equiv="refresh" content="600">
+<title>Na Ponta — Status do Projeto</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+         background:#0f172a; color:#e2e8f0; min-height:100vh; padding:24px; }
+  .wrap { max-width:640px; margin:0 auto; }
+  header { text-align:center; margin:16px 0 28px; }
+  header h1 { margin:0; font-size:1.9rem; letter-spacing:.5px; }
+  header p { margin:4px 0 0; color:#94a3b8; }
+  .hero { background:#1e293b; border-radius:20px; padding:32px 24px; text-align:center; margin-bottom:24px; }
+  .big { font-size:4rem; font-weight:800; line-height:1; background:linear-gradient(90deg,#38bdf8,#22c55e);
+         -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { color:#94a3b8; margin:6px 0 18px; }
+  .track { background:#334155; border-radius:99px; height:14px; overflow:hidden; }
+  .track .fill { height:100%; border-radius:99px; transition:width .6s; }
+  .hero .track { height:20px; }
+  .epicos { background:#1e293b; border-radius:20px; padding:20px 22px; }
+  .epico { margin:14px 0; }
+  .epico-top { display:flex; justify-content:space-between; font-size:.92rem; margin-bottom:6px; }
+  .frac { color:#94a3b8; }
+  footer { text-align:center; color:#64748b; font-size:.82rem; margin-top:24px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>📦 Na Ponta</h1>
+      <p>Status do Projeto</p>
+    </header>
+    <div class="hero">
+      <div class="big">6%</div>
+      <div class="sub">3 de 47 tarefas concluídas</div>
+      <div class="track"><div class="fill" style="width:6%;background:linear-gradient(90deg,#38bdf8,#22c55e)"></div></div>
+    </div>
+    <div class="epicos">
+      <div class="epico">
+        <div class="epico-top"><span>01 · Fundação</span><span class="frac">3/6 · 50%</span></div>
+        <div class="track"><div class="fill" style="width:50%;background:#38bdf8"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>02 · Auth & Perfis</span><span class="frac">0/6 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>03 · Cadastros</span><span class="frac">0/6 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>04 · Captura (Promotor)</span><span class="frac">0/5 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>05 · Sync offline</span><span class="frac">0/6 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>06 · Resolução (Vendedor)</span><span class="frac">0/5 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>07 · Dashboard & Relatórios</span><span class="frac">0/4 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>08 · Alertas</span><span class="frac">0/3 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>09 · Auditoria & LGPD</span><span class="frac">0/2 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+      <div class="epico">
+        <div class="epico-top"><span>10 · Deploy & Piloto</span><span class="frac">0/4 · 0%</span></div>
+        <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
+      </div>
+    </div>
+    <footer>Atualizado em 28/07/2026 às 22:09 (Fortaleza) · esta página atualiza sozinha</footer>
+  </div>
+</body>
+</html>
