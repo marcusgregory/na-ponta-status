@@ -10,36 +10,81 @@
   * { box-sizing: border-box; }
   body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
          background:#0f172a; color:#e2e8f0; min-height:100vh; padding:24px; }
-  .wrap { max-width:640px; margin:0 auto; }
-  header { text-align:center; margin:16px 0 28px; }
+  .wrap { max-width:680px; margin:0 auto; }
+  header { text-align:center; margin:12px 0 24px; }
   header h1 { margin:0; font-size:1.9rem; letter-spacing:.5px; }
   header p { margin:4px 0 0; color:#94a3b8; }
-  .hero { background:#1e293b; border-radius:20px; padding:32px 24px; text-align:center; margin-bottom:24px; }
-  .big { font-size:4rem; font-weight:800; line-height:1; background:linear-gradient(90deg,#38bdf8,#22c55e);
-         -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .sub { color:#94a3b8; margin:6px 0 18px; }
+  .hero { background:#1e293b; border-radius:22px; padding:28px; text-align:center; margin-bottom:18px; }
+  .ring { position:relative; width:180px; height:180px; margin:0 auto; }
+  .ring .lbl { position:absolute; inset:0; display:grid; place-items:center; flex-direction:column; }
+  .ring .num { font-size:2.8rem; font-weight:800; line-height:1;
+              background:linear-gradient(90deg,#38bdf8,#22c55e); -webkit-background-clip:text;
+              background-clip:text; color:transparent; }
+  .ring .cap { font-size:.8rem; color:#94a3b8; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:12px; margin-bottom:18px; }
+  .card { background:#1e293b; border-radius:16px; padding:16px 10px; text-align:center; }
+  .card-ico { font-size:1.1rem; }
+  .card-val { font-size:1.15rem; font-weight:700; margin-top:4px; word-break:break-word; }
+  .card-lbl { font-size:.74rem; color:#94a3b8; margin-top:2px; }
+  .epicos { background:#1e293b; border-radius:22px; padding:20px 22px; }
+  .epicos h2 { font-size:.9rem; color:#94a3b8; text-transform:uppercase; letter-spacing:1px; margin:0 0 8px; }
+  .epico { margin:14px 0; }
+  .epico-top { display:flex; justify-content:space-between; font-size:.92rem; margin-bottom:6px; gap:8px; }
+  .frac { color:#94a3b8; white-space:nowrap; }
   .track { background:#334155; border-radius:99px; height:14px; overflow:hidden; }
   .track .fill { height:100%; border-radius:99px; transition:width .6s; }
-  .hero .track { height:20px; }
-  .epicos { background:#1e293b; border-radius:20px; padding:20px 22px; }
-  .epico { margin:14px 0; }
-  .epico-top { display:flex; justify-content:space-between; font-size:.92rem; margin-bottom:6px; }
-  .frac { color:#94a3b8; }
-  footer { text-align:center; color:#64748b; font-size:.82rem; margin-top:24px; }
+  footer { text-align:center; color:#64748b; font-size:.82rem; margin-top:20px; }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1>📦 Na Ponta</h1>
-      <p>Status do Projeto</p>
-    </header>
+    <header><h1>📦 Na Ponta</h1><p>Status do Projeto</p></header>
+
     <div class="hero">
-      <div class="big">6%</div>
-      <div class="sub">3 de 47 tarefas concluídas</div>
-      <div class="track"><div class="fill" style="width:6%;background:linear-gradient(90deg,#38bdf8,#22c55e)"></div></div>
+      <div class="ring">
+        <svg width="180" height="180" viewBox="0 0 160 160">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#22c55e"/>
+          </linearGradient></defs>
+          <circle cx="80" cy="80" r="70" fill="none" stroke="#334155" stroke-width="14"/>
+          <circle cx="80" cy="80" r="70" fill="none" stroke="url(#g)" stroke-width="14"
+                  stroke-linecap="round" stroke-dasharray="26.4 439.8"
+                  transform="rotate(-90 80 80)"/>
+        </svg>
+        <div class="lbl"><div><div class="num">6%</div><div class="cap">3 de 47</div></div></div>
+      </div>
     </div>
+
+    <div class="grid">
+        <div class="card">
+          <div class="card-ico">✅</div>
+          <div class="card-val">3</div>
+          <div class="card-lbl">concluídas</div>
+        </div>
+        <div class="card">
+          <div class="card-ico">📋</div>
+          <div class="card-val">44</div>
+          <div class="card-lbl">restantes</div>
+        </div>
+        <div class="card">
+          <div class="card-ico">🧭</div>
+          <div class="card-val">01 · Fundação</div>
+          <div class="card-lbl">fase atual</div>
+        </div>
+        <div class="card">
+          <div class="card-ico">⚡</div>
+          <div class="card-val">3</div>
+          <div class="card-lbl">na semana</div>
+        </div>
+        <div class="card">
+          <div class="card-ico">🎯</div>
+          <div class="card-val">~15 sem</div>
+          <div class="card-lbl">estimativa</div>
+        </div>
+    </div>
+
     <div class="epicos">
+      <h2>Progresso por etapa</h2>
       <div class="epico">
         <div class="epico-top"><span>01 · Fundação</span><span class="frac">3/6 · 50%</span></div>
         <div class="track"><div class="fill" style="width:50%;background:#38bdf8"></div></div>
@@ -81,7 +126,8 @@
         <div class="track"><div class="fill" style="width:0%;background:#334155"></div></div>
       </div>
     </div>
-    <footer>Atualizado em 28/07/2026 às 22:09 (Fortaleza) · esta página atualiza sozinha</footer>
+
+    <footer>Última tarefa concluída há 49 min · página atualizada em 28/07/2026 às 22:15 (Fortaleza)<br>atualiza sozinha</footer>
   </div>
 </body>
 </html>
